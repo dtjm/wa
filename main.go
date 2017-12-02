@@ -80,14 +80,14 @@ func sendRequest(appID, query string) error {
 
 	return formatResponse(respBody, os.Stdout)
 }
-
-type queryResult struct {
-	Pods []struct {
-		Title  string `xml:"title,attr"`
-		SubPod []struct {
-			PlainText string `xml:"plaintext"`
-		} `xml:"subpod"`
-	} `xml:"pod"`
+ 
+ty  pe queryResult struct {
+	Pods []struct {  
+		Title  strin g `xml:"title,attr"`
+		SubPod []st ruct {
+			PlainT ext string `xml:"plaintext"`
+		} `xml:"s ubpod"`
+	} `xml:"pod" `
 }
 
 func formatResponse(in []byte, w io.Writer) error {
